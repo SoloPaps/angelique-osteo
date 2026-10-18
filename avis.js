@@ -74,26 +74,22 @@ function renderCard(r) {
   const liked = hasLiked(r.id);
   const card = document.createElement('article');
   card.className = 'review-card';
-  card.setAttribute('itemscope', '');
-  card.setAttribute('itemtype', 'https://schema.org/Review');
   card.innerHTML = `
     <div class="review-header">
       <div class="avatar" style="background:${avatarColor(r.firstname)}" aria-hidden="true">${initials(r.firstname, r.lastname || '')}</div>
       <div class="review-meta">
-        <div class="review-name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">${esc(r.firstname)}${r.lastname ? ' ' + esc(r.lastname) : ''}</span></div>
+        <div class="review-name"><span>${esc(r.firstname)}${r.lastname ? ' ' + esc(r.lastname) : ''}</span></div>
         <div class="review-info">
-          <time class="review-date" itemprop="datePublished" datetime="${esc(r.date || '')}">${fmtDate(r.date)}</time>
+          <time class="review-date" datetime="${esc(r.date || '')}">${fmtDate(r.date)}</time>
           <span class="source-badge ${SRC_CLASS[src]}">${SRC_LABELS[src]}</span>
           ${r.moodLabel ? `<span class="mood-tag" aria-label="Ressenti : ${esc(r.moodLabel)}">${mood} ${esc(r.moodLabel)}</span>` : ''}
         </div>
       </div>
     </div>
-    <div class="review-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="${r.rating} étoiles sur 5">
-      <meta itemprop="ratingValue" content="${r.rating}">
-      <meta itemprop="bestRating" content="5">
+    <div class="review-stars" aria-label="${r.rating} étoiles sur 5">
       ${stars(r.rating)}
     </div>
-    <p class="review-text" itemprop="reviewBody">${esc(r.text)}</p>
+    <p class="review-text">${esc(r.text)}</p>
     <div class="review-footer">
       <button class="like-btn${liked ? ' liked' : ''}" data-id="${esc(r.id)}" aria-label="${liked ? 'Retirer le like' : 'Liker cet avis'}" aria-pressed="${liked}">
         <span class="like-icon" aria-hidden="true">${liked ? '❤️' : '🤍'}</span>
