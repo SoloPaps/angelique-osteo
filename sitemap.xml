@@ -66,6 +66,60 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://angelique-osteo.fr/osteopathe-bebe-nourrisson-bessan</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/baby.webp</image:loc>
+      <image:title>Ostéopathe bébé et nourrisson à Bessan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://angelique-osteo.fr/osteopathie-femme-enceinte-post-partum</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/grossesse.webp</image:loc>
+      <image:title>Ostéopathie femme enceinte et post-partum à Bessan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://angelique-osteo.fr/osteopathe-du-sportif</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/sport.webp</image:loc>
+      <image:title>Ostéopathe du sportif à Bessan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://angelique-osteo.fr/premiere-seance</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://angelique-osteo.fr/osteopathe-pres-agde</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://angelique-osteo.fr/osteopathe-pres-beziers</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- MENTIONS LÉGALES — obligatoire RGPD, faible priorité -->
   <url>
     <loc>https://angelique-osteo.fr/mentions-legales</loc>
