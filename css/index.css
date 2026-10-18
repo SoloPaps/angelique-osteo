@@ -119,7 +119,7 @@ body {
 
 .navbar-links a:hover {
     background-color:#faf7f5;
-    color:#7d9d85
+    color:#53775c
 }
 
 .btn-rdv {
@@ -128,7 +128,7 @@ body {
     font-weight:600;
     color:#fff!important;
     text-decoration:none;
-    background:linear-gradient(135deg, #bf7ad0, #a86bb8);
+    background:linear-gradient(135deg, #aa4ec0, #9650a8);
     border-radius:50px;
     white-space:nowrap;
     flex-shrink:0
@@ -185,7 +185,7 @@ body {
     height:36px;
     cursor:pointer;
     z-index:10;
-    color:#bf7ad0;
+    color:#aa4ec0;
     font-size:14px;
     display:flex;
     align-items:center;
@@ -239,8 +239,8 @@ body {
     font-weight:600;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color:#5e7664;
-    border:1px solid #5e7664;
+    color:#53775c;
+    border:1px solid #53775c;
     padding:4px 10px;
     border-radius:20px;
     margin-bottom:12px
@@ -270,7 +270,7 @@ body {
 .stat p {
     display:block;
     font-size:3rem;
-    color:#5e7664;
+    color:#53775c;
     font-weight:600
 }
 
@@ -326,7 +326,7 @@ body {
 
 .spec-item {
     padding:18px 14px;
-    border-bottom:3px solid #7d9d85;
+    border-bottom:3px solid #53775c;
     background:#fdfcfb;
     border-radius:12px
 }
@@ -341,7 +341,7 @@ body {
 .spec-item p {
     font-size:0.78rem;
     line-height:1.5;
-    color:#777
+    color:#6e6e6e
 }
 
 .infos-cabinet {
@@ -500,7 +500,7 @@ body {
 .marquee-author {
     font-size:0.78rem;
     font-weight:600;
-    color:#bf7ad0
+    color:#aa4ec0
 }
 
 .marquee-author span {
@@ -598,7 +598,7 @@ body {
 .help-toggle {
     width:46px;
     height:46px;
-    background-color:#bf7ad0;
+    background-color:#aa4ec0;
     border-radius:50%;
     border:none;
     color:white;
@@ -726,7 +726,7 @@ body {
 
     .navbar-links a:hover {
         background:none;
-        color:#bf7ad0
+        color:#aa4ec0
 }
 
     .spec-list {
@@ -1007,7 +1007,7 @@ body {
 }
 
 .color-mode-check {
-    color:#7d9d85;
+    color:#53775c;
     font-size:12px;
     margin-left:4px
 }

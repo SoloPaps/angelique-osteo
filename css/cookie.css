@@ -70,3 +70,32 @@
     border-color:#999;
     color:#fff
 }
+
+.btn-accept-cookies:focus-visible,
+.btn-refuse-cookies:focus-visible,
+#cookie-banner a:focus-visible {
+    outline:3px solid #fff;
+    outline-offset:2px
+}
+
+.skip-link {
+    position:absolute;
+    left:12px;
+    top:8px;
+    z-index:10001;
+    padding:10px 14px;
+    background:#3d3530;
+    color:#fff;
+    font-family:'Plus Jakarta Sans', 'Poppins', sans-serif;
+    font-size:0.9rem;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:6px;
+    transform:translateY(-200%)
+}
+
+.skip-link:focus {
+    transform:translateY(0);
+    outline:3px solid #fff;
+    outline-offset:2px
+}

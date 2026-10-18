@@ -37,7 +37,7 @@ function genToken() { return Array.from(crypto.getRandomValues(new Uint8Array(18
 
 const SRC_LABELS = { google: 'Google', facebook: 'Facebook', connaissances: 'Connaissances', direct: 'Direct' };
 const SRC_CLASS  = { google: 'google', facebook: 'facebook', connaissances: 'direct', direct: 'direct' };
-const COLORS = ['#7d9d85', '#bf7ad0', '#e07b55', '#5b8db8', '#c4956a', '#7b9abf', '#b07db0'];
+const COLORS = ['#5e7c66', '#aa4ec0', '#c55024', '#4779a5', '#9c6a3e', '#5177a6', '#9d5f9d'];
 function avatarColor(n) { let h = 0; for (let i = 0; i < n.length; i++) h = n.charCodeAt(i) + ((h << 5) - h); return COLORS[Math.abs(h) % COLORS.length]; }
 function initials(f, l) { return (f[0] || '?').toUpperCase() + (l ? l[0].toUpperCase() : ''); }
 
@@ -264,6 +264,18 @@ async function showAdmin() {
   });
 }
 
+function ensureFirebaseAuth() {
+  if (window._auth && window._signIn) return Promise.resolve(true);
+  return new Promise(function(resolve) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = '/firebase-init.js?v=2';
+    s.onload = function() { resolve(!!(window._auth && window._signIn)); };
+    s.onerror = function() { resolve(false); };
+    document.head.appendChild(s);
+  });
+}
+
 async function handleUrl() {
   const p = new URLSearchParams(window.location.search);
   const action = p.get('action'), id = p.get('id'), token = p.get('token'), admin = p.get('admin');
@@ -287,6 +299,7 @@ async function handleUrl() {
     }
     if ((now - attempts.ts) >= ADMIN_LOCK_MS) resetAdminAttempts();
 
+    await ensureFirebaseAuth();
     if (!window._auth || !window._signIn) {
       showToast('SDK Firebase Auth non chargé — vérifie la console.', 'error');
       window.history.replaceState({}, '', window.location.pathname);
@@ -327,6 +340,7 @@ async function handleUrl() {
     if (!safeToken) { showToast('Token invalide.', 'error'); return; }
 
     // Authentification requise pour approuver/rejeter (Firebase Rules exigent auth sur reviews.write)
+    await ensureFirebaseAuth();
     if (!window._auth || !window._signIn) {
       showToast('SDK Firebase non chargé — réessayez dans quelques secondes.', 'error');
       window.history.replaceState({}, '', window.location.pathname);
@@ -474,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fErr.textContent = 'La vérification anti-robot nécessite d’accepter les cookies.';
       var lnk = document.createElement('a'); lnk.href = '#'; lnk.textContent = ' Gérer mes préférences';
       lnk.style.cssText = 'color:inherit;font-weight:600;text-decoration:underline;';
-      lnk.onclick = function(e){ e.preventDefault(); var b=document.getElementById('cookie-banner'); if(b)b.style.display=''; };
+      lnk.onclick = function(e){ e.preventDefault(); if (window.openCookieDialog) window.openCookieDialog(lnk); else { var b=document.getElementById('cookie-banner'); if(b)b.style.display='flex'; } };
       fErr.appendChild(lnk);
       btn.disabled = false; btn.textContent = 'Envoyer mon témoignage';
       return;

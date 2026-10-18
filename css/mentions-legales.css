@@ -4,8 +4,6 @@
    ============================================================= */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
-
 :root {
     --cream:#f8f5f0;
     --warm-white:#fdfcfa;
@@ -551,7 +549,7 @@ footer {
 .help-toggle {
     width:46px;
     height:46px;
-    background-color:#bf7ad0;
+    background-color:#aa4ec0;
     border-radius:50%;
     border:none;
     color:white;
@@ -639,7 +637,7 @@ footer {
 }
 
 .color-mode-check {
-    color:#7d9d85;
+    color:#53775c;
     font-size:12px;
     margin-left:4px
 }
