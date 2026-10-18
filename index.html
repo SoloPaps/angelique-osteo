@@ -73,7 +73,7 @@
       "image": "https://angelique-osteo.fr/photos-header/sport.webp",
       "description": "Cabinet d'ostéopathie à Bessan (34550). Prise en charge des nourrissons, bébés, femmes enceintes, adultes, sportifs et seniors. Fasciathérapie, drainage lymphatique. Urgences ostéopathiques. Interventions sur Béziers, Agde, Pézenas et alentours.",
       "telephone": "+33622400172",
-      "priceRange": "€€",
+      "priceRange": "60-120€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Espèces, Chèque",
       "medicalSpecialty": ["Osteopathic"],
@@ -119,17 +119,28 @@
         { "@type": "City", "name": "Portiragnes",            "sameAs": "https://www.wikidata.org/wiki/Q1148425" },
         { "@type": "City", "name": "Nézignan-l'Évêque" }
       ],
+      "openingHours": [
+        "Mo-Fr 08:00-13:00",
+        "Mo-Fr 14:00-20:00",
+        "Sa 08:00-13:00"
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "08:45",
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "14:00",
           "closes": "20:00"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Saturday",
-          "opens": "09:00",
+          "opens": "08:00",
           "closes": "13:00"
         }
       ],
@@ -146,12 +157,9 @@
         "@type": "OfferCatalog",
         "name": "Consultations d'ostéopathie",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie adulte", "description": "Traitement des douleurs articulaires, musculaires et vertébrales." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie nourrisson et enfant", "description": "Bilan nouveau-né, coliques, tête plate, troubles du sommeil, RGO." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie femme enceinte", "description": "Suivi périnatal, préparation à l'accouchement, douleurs ligamentaires." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie sportif", "description": "Prévention et récupération, traitement des traumatismes sportifs." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drainage lymphatique manuel", "description": "Réduction des œdèmes, amélioration de la circulation lymphatique." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fasciathérapie", "description": "Travail en profondeur sur les fascias pour libérer les tensions chroniques." }, "price": "60", "priceCurrency": "EUR" }
+          { "@type": "AggregateOffer", "lowPrice": "60", "highPrice": "80", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Séance d'ostéopathie ou drainage lymphatique", "description": "Adulte, nourrisson, enfant, femme enceinte, sportif. La fasciathérapie et le drainage lymphatique sont dans la même fourchette." } },
+          { "@type": "AggregateOffer", "lowPrice": "80", "highPrice": "100", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Séance avec majoration", "description": "Après 20h, samedi après-midi, dimanche et jour férié : 20 euros de plus sur la consultation initiale." } },
+          { "@type": "AggregateOffer", "lowPrice": "80", "highPrice": "120", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Déplacement à domicile", "description": "Dans la limite de 15 km : au minimum 20 euros de plus sur la consultation initiale, plus les indemnités kilométriques. Déplacements à Agde et à Béziers possibles, avec majoration au-delà de 15 km." } }
         ]
       },
       "sameAs": [
@@ -235,7 +243,7 @@
         {
           "@type": "Question",
           "name": "Quel est le tarif d'une séance d'ostéopathie à Bessan ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La séance d'ostéopathie est à 60€ pour un adulte, un enfant, un nourrisson ou une femme enceinte. Une majoration s'applique pour les consultations à domicile." }
+          "acceptedAnswer": { "@type": "Answer", "text": "La séance d'ostéopathie ou de drainage lymphatique est de 60 à 80 €. Une séance avec majoration (après 20h, le samedi après-midi, le dimanche ou un jour férié) est de 80 à 100 €, soit 20 € de plus sur la consultation initiale. À domicile : de 80 à 120 €, avec au minimum 20 € de plus, plus les indemnités kilométriques. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15 km." }
         },
         {
           "@type": "Question",
@@ -250,12 +258,12 @@
         {
           "@type": "Question",
           "name": "Comment prendre rendez-vous avec l'ostéopathe à Bessan ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez prendre rendez-vous en ligne via Doctolib, ou par téléphone au 06 22 40 01 72. Le cabinet est ouvert du lundi au vendredi de 8h45 à 20h00 et le samedi de 9h00 à 13h00." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez prendre rendez-vous en ligne via Doctolib, ou par téléphone au 06 22 40 01 72. Le cabinet est ouvert du lundi au vendredi de 8h à 13h et de 14h à 20h, et le samedi de 8h à 13h. Le dimanche, le cabinet est fermé." }
         },
         {
           "@type": "Question",
           "name": "Angélique Héduin se déplace-t-elle à domicile ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, elle se déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer (personnes âgées, nouveau-nés, post-opératoire). Une majoration tarifaire s'applique." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, elle se déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer (personnes âgées, nouveau-nés, post-opératoire). Le tarif à domicile est de 80 à 120 € : au minimum 20 € de plus sur la consultation initiale, plus les indemnités kilométriques. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15 km." }
         }
       ]
     }
@@ -324,7 +332,7 @@
                     <h1>Votre ostéopathe à Bessan — <em>Angélique Héduin D.O.</em></h1>
                     <p class="tagline">La clarté du soin, l'équilibre du corps</p>
                     <p>
-                        Je suis <strong>Angélique Héduin</strong>, ostéopathe D.O. diplômée et installée à <strong>Bessan</strong>, dans l'Hérault. Je vous accueille dans mon cabinet pour soulager vos douleurs articulaires, musculaires et restaurer votre mobilité grâce à une <strong>approche manuelle ostéopathique et fasciathérapeutique globale et personnalisée</strong>. Que vous soyez nourrisson, femme enceinte, sportif, adulte ou senior (à titre curatif ou préventif), j'adapte chaque séance d'ostéopathie à vos besoins spécifiques et à vos pathologies. J'interviens également à domicile dans un rayon de 15 km autour de Bessan, sur des communes comme <strong>Agde, Florensac, Pézenas, Saint-Thibéry et Marseillan</strong>.
+                        Je suis <strong>Angélique Héduin</strong>, ostéopathe D.O. diplômée et installée à <strong>Bessan</strong>, dans l'Hérault. Je vous accueille dans mon cabinet pour soulager vos douleurs articulaires, musculaires et restaurer votre mobilité grâce à une <strong>approche manuelle ostéopathique et fasciathérapeutique globale et personnalisée</strong>. Que vous soyez nourrisson, femme enceinte, sportif, adulte ou senior (à titre curatif ou préventif), j'adapte chaque séance d'ostéopathie à vos besoins spécifiques et à vos pathologies. J'interviens également à domicile dans un rayon de 15 km autour de Bessan, sur des communes comme <strong>Agde, Florensac, Pézenas, Saint-Thibéry et Marseillan</strong>. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15 km.
                     </p>
                 </div>
                 <div class="grid-item portrait-block">
@@ -408,7 +416,7 @@
                         </div>
                         <div class="info-text">
                             <h3>Déplacements à domicile</h3>
-                            <p>Je me déplace également à votre domicile dans un <strong>rayon de 15 km</strong> autour de Bessan pour les personnes qui ne peuvent pas se déplacer. Une majoration tarifaire de 20€ s'applique pour ces consultations.</p>
+                            <p>Je me déplace également à votre domicile dans un <strong>rayon de 15 km</strong> autour de Bessan pour les personnes qui ne peuvent pas se déplacer. Le tarif à domicile est de <strong>80 à 120&nbsp;€</strong>&nbsp;: au minimum 20&nbsp;€ de plus sur la consultation initiale, plus les indemnités kilométriques. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15&nbsp;km.</p>
                         </div>
                     </div>
                 </div>
@@ -604,6 +612,8 @@
                 <p><strong>Angélique Héduin</strong> — Ostéopathe D.O.</p>
                 <p>17 Chemin du Maïroual, 34550 Bessan</p>
                 <p>Tél : <a href="tel:+33622400172">06 22 40 01 72</a></p>
+                <p>Lundi–vendredi 8h–13h et 14h–20h · samedi 8h–13h · dimanche fermé</p>
+                <p>Séance 60–80 € · majoration 80–100 € · domicile 80–120 €</p>
             </div>
             <div class="footer-legal">
                 <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="/mentions-legales">Mentions légales</a> | <a href="#cookie-banner" id="manage-cookies">Gérer les cookies</a></p>
