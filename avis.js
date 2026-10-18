@@ -123,7 +123,6 @@ function renderList() {
   list.innerHTML = '';
   if (!filtered.length) { list.innerHTML = `<div class="empty-state"><p style="font-size:1.5rem" aria-hidden="true">💬</p><p>Aucun avis dans cette catégorie.</p></div>`; return; }
   filtered.forEach(r => list.appendChild(renderCard(r)));
-  updateSchema();
 }
 
 function fbBase() { return CFG.fbUrl; }
@@ -394,23 +393,6 @@ async function handleUrl() {
     if (ok && action === 'approve') await init();
     window.history.replaceState({}, '', window.location.pathname);
   }
-}
-
-function updateSchema() {
-  const approved = reviews.filter(r => r.approved !== false);
-  if (!approved.length) return;
-  const avg = (approved.reduce((s, r) => s + (Number(r.rating) || 5), 0) / approved.length).toFixed(1);
-  const count = String(approved.length);
-  document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
-    try {
-      const d = JSON.parse(s.textContent);
-      if (d.aggregateRating) {
-        d.aggregateRating.ratingValue = avg;
-        d.aggregateRating.reviewCount = count;
-        s.textContent = JSON.stringify(d);
-      }
-    } catch {}
-  });
 }
 
 async function init() {
