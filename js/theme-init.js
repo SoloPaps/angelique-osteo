@@ -2,7 +2,6 @@
    Choix mémorisé : auto | light | dark. Défaut : auto (prefers-color-scheme). */
 (function () {
   var KEY = "ao-theme";
-  var NEXT = { auto: "light", light: "dark", dark: "auto" };
   var LABEL = { auto: "Auto", light: "Clair", dark: "Sombre" };
 
   function stored() {
@@ -25,14 +24,14 @@
     document.documentElement.classList.toggle("theme-dark", dark);
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", dark ? "#171e1b" : "#7d9d85");
-    var btn = document.getElementById("theme-toggle");
-    if (!btn) return;
-    var label = btn.querySelector(".theme-toggle-label");
-    if (label) label.textContent = LABEL[choice];
-    btn.setAttribute(
-      "aria-label",
-      "Thème : " + LABEL[choice] + ". Passer à " + LABEL[NEXT[choice]] + "."
-    );
+    var nodes = document.querySelectorAll(".theme-choice");
+    for (var i = 0; i < nodes.length; i++) {
+      var on = nodes[i].getAttribute("data-theme") === choice;
+      nodes[i].setAttribute("aria-pressed", on ? "true" : "false");
+      var mark = nodes[i].querySelector(".theme-choice-check");
+      if (mark) mark.textContent = on ? "✓" : "";
+      nodes[i].setAttribute("aria-label", LABEL[nodes[i].getAttribute("data-theme")] + (on ? ", choix actuel" : ""));
+    }
   }
 
   apply(stored());
@@ -46,12 +45,13 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     apply(stored());
-    var btn = document.getElementById("theme-toggle");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      var next = NEXT[stored()];
-      try { localStorage.setItem(KEY, next); } catch (e) {}
-      apply(next);
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest ? e.target.closest(".theme-choice") : null;
+      if (!btn) return;
+      var choice = btn.getAttribute("data-theme");
+      if (choice !== "auto" && choice !== "light" && choice !== "dark") return;
+      try { localStorage.setItem(KEY, choice); } catch (err) {}
+      apply(choice);
     });
   });
 })();

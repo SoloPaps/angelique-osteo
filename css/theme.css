@@ -4,91 +4,91 @@
    La classe .theme-dark est posée sur <html> avant le rendu.
    ============================================================= */
 
-.theme-toggle {
-    appearance:none;
-    -webkit-appearance:none;
-    border:1px solid rgba(61, 53, 48, 0.22);
-    background:transparent;
-    color:#3d3530;
-    font-family:'Poppins', 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
-    font-size:0.68rem;
-    font-weight:600;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    line-height:1;
-    border-radius:100px;
-    padding:0.45rem 0.72rem;
+/* Choix Auto / Clair / Sombre dans le menu du bouton « ? ». */
+.theme-choice {
     cursor:pointer;
-    flex-shrink:0
+    font-family:inherit
 }
 
-.theme-toggle:hover {
-    background:rgba(125, 157, 133, 0.14)
+.theme-choice-check {
+    margin-left:2px;
+    min-width:1em;
+    text-align:center;
+    color:#5e7d65;
+    font-weight:700
 }
 
-.theme-toggle:focus {
-    outline:none
+.theme-choice[aria-pressed="true"] {
+    box-shadow:0 0 0 2px #7d9d85
 }
 
-.theme-toggle:focus-visible {
-    outline:2px solid #7d9d85;
-    outline-offset:3px
+.theme-swatch-auto {
+    background:linear-gradient(90deg, #fdfcfb 50%, #171e1b 50%);
+    border:1.5px solid #cfc8c0
 }
 
-@media (max-width:767px) {
-    .navbar {
-        justify-content:flex-start;
-        gap:8px
-    }
-
-    .navbar .logo {
-        margin-right:auto
-    }
-
-    .theme-toggle {
-        padding:0.4rem 0.55rem;
-        letter-spacing:0.04em
-    }
+.color-mode-swatch {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-block
 }
 
-@media (max-width:380px) {
-    .navbar .btn-rdv {
-        padding:8px 10px;
-        font-size:12px
-    }
-}
-
-.back-bar {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px
-}
-
-.back-bar .theme-toggle {
-    color:#f4f0e8;
-    border-color:rgba(244, 240, 232, 0.45)
-}
-
-.back-bar .theme-toggle:hover {
-    background:rgba(255, 255, 255, 0.08)
-}
-
-.topbar-404 {
+/* Le menu flottant n'est stylé dans les CSS de page que hors 404. */
+.floating-help {
     position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    height:56px;
+    bottom:18px;
+    right:16px;
+    z-index:2000;
     display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    padding:0 16px;
-    z-index:20
+    flex-direction:column;
+    align-items:flex-end;
+    background:transparent;
+    isolation:isolate
 }
 
-.container-404 {
-    padding-top:4.5rem
+.floating-actions {
+    display:none;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:8px;
+    margin-bottom:10px;
+    background:transparent
+}
+
+.floating-actions.open {
+    display:flex
+}
+
+.floating-action-btn {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:999px;
+    padding:8px 16px 8px 12px;
+    text-decoration:none;
+    color:#333;
+    font-size:13px;
+    font-weight:500;
+    white-space:nowrap;
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.08);
+    transition:background 0.2s
+}
+
+.help-toggle {
+    width:46px;
+    height:46px;
+    background-color:#bf7ad0;
+    border-radius:50%;
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 3px 12px rgba(191, 122, 208, 0.4)
 }
 
 /* ---------- Sombre ---------- */
@@ -132,13 +132,12 @@ html.theme-dark ::selection {
     color:#f6f1e8
 }
 
-html.theme-dark .theme-toggle {
-    border-color:rgba(243, 239, 230, 0.35);
-    color:#f3efe6
+html.theme-dark .theme-choice-check {
+    color:#c5dccb
 }
 
-html.theme-dark .theme-toggle:hover {
-    background:rgba(168, 196, 174, 0.16)
+html.theme-dark .theme-choice[aria-pressed="true"] {
+    box-shadow:0 0 0 2px #c5dccb
 }
 
 html.theme-dark h1,

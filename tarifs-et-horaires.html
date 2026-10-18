@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/theme-init.js?v=1"></script>
+    <script src="js/theme-init.js?v=2"></script>
 
     <!-- === PRECONNECT & PRELOAD EN PRIORITÉ ABSOLUE === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,7 +193,7 @@
     <link rel="stylesheet" href="css/tarifs-et-horaires.css?v=3">
     <link rel="stylesheet" href="css/cookie.css?v=3">
   <script>try{var _cs=localStorage.getItem('cookie_consent');if(_cs==='accepted'||_cs==='refused'){var _cb=document.getElementById('cookie-banner');if(_cb)_cb.style.display='none';}}catch(e){}</script>
-    <link rel="stylesheet" href="css/theme.css?v=1">
+    <link rel="stylesheet" href="css/theme.css?v=2">
 </head>
 <body>
 
@@ -222,9 +222,6 @@
                 <li><a href="/avis">AVIS</a></li>
                 <li><a href="/actualites">FAQ</a></li>
             </ul>
-            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Thème : Auto. Passer à Clair.">
-                <span class="theme-toggle-label">Auto</span>
-            </button>
             <a href="https://www.doctolib.fr/osteopathe/bessan/angelique-heduin/booking/motives?specialityId=10&telehealth=false&placeId=practice-811728&source=profile" class="btn-rdv" target="_blank" rel="noopener noreferrer">Prendre RDV</a>
         </nav>
     </header>
@@ -352,8 +349,24 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>Appeler</span>
             </a>
-</nav>
-<button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
+
+            <button type="button" class="floating-action-btn theme-choice" data-theme="auto" aria-pressed="true" aria-label="Auto, choix actuel">
+                <span class="color-mode-swatch theme-swatch-auto" aria-hidden="true"></span>
+                <span>Auto</span>
+                <span class="theme-choice-check" aria-hidden="true">✓</span>
+            </button>
+            <button type="button" class="floating-action-btn theme-choice" data-theme="light" aria-pressed="false" aria-label="Clair">
+                <span class="color-mode-swatch" style="background:#fdfcfb;border:1.5px solid #cfc8c0;" aria-hidden="true"></span>
+                <span>Clair</span>
+                <span class="theme-choice-check" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="floating-action-btn theme-choice" data-theme="dark" aria-pressed="false" aria-label="Sombre">
+                <span class="color-mode-swatch" style="background:#171e1b;border:1.5px solid #3d4d44;" aria-hidden="true"></span>
+                <span>Sombre</span>
+                <span class="theme-choice-check" aria-hidden="true"></span>
+            </button>
+            </nav>
+        <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
     </div>
 
     <footer class="site-footer">
