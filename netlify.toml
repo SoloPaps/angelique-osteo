@@ -192,8 +192,6 @@
   status = 301
   force = true
 
-# URL inconnue : 404.html avec un vrai statut 404.
-# Sans force, les fichiers, les pretty URLs et les règles ci-dessus restent prioritaires.
 [[redirects]]
   from = "/osteopathe-agde"
   to = "/osteopathe-pres-agde"
@@ -242,6 +240,8 @@
   status = 301
   force = true
 
+# URL inconnue : 404.html avec un vrai statut 404.
+# Sans force, les fichiers, les pretty URLs et les règles ci-dessus restent prioritaires.
 [[redirects]]
   from = "/*"
   to = "/404.html"
