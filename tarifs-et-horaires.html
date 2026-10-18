@@ -12,7 +12,7 @@
 
     <!-- === SEO BASE === -->
     <title>Tarifs &amp; Horaires — Ostéopathe à Bessan | Angélique Héduin</title>
-    <meta name="description" content="Tarifs et horaires du cabinet d'ostéopathie à Bessan. Séance à 60€. Ouvert lundi–vendredi 8h45–20h, samedi 9h–13h. Déplacements à domicile (15 km). Agde, Pézenas, Hérault.">
+    <meta name="description" content="Tarifs et horaires du cabinet d'ostéopathie à Bessan. Séance 60–80 €, majoration 80–100 €, domicile 80–120 €. Lundi–vendredi 8h–13h et 14h–20h, samedi 8h–13h, dimanche fermé. Agde, Béziers, Hérault.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Angélique Héduin — Ostéopathe D.O.">
     <link rel="canonical" href="https://angelique-osteo.fr/tarifs-et-horaires">
@@ -39,7 +39,7 @@
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Angélique Héduin — Ostéopathe D.O.">
     <meta property="og:title" content="Tarifs &amp; Horaires — Ostéopathe à Bessan | Angélique Héduin">
-    <meta property="og:description" content="Séance d'ostéopathie à 60€ à Bessan. Ouvert du lundi au vendredi 8h45–20h, samedi 9h–13h. Déplacements à domicile dans un rayon de 15 km.">
+    <meta property="og:description" content="Séance 60–80 € à Bessan, majoration 80–100 €, domicile 80–120 €. Ouvert du lundi au vendredi 8h–13h et 14h–20h, samedi 8h–13h, dimanche fermé.">
     <meta property="og:image" content="https://angelique-osteo.fr/photos-header/open-graph.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -50,7 +50,7 @@
     <!-- === TWITTER CARD === -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tarifs &amp; Horaires — Ostéopathe à Bessan | Angélique Héduin">
-    <meta name="twitter:description" content="Séance d'ostéopathie à 60€ à Bessan. Ouvert du lundi au vendredi 8h45–20h, samedi 9h–13h.">
+    <meta name="twitter:description" content="Séance 60–80 € à Bessan. Ouvert du lundi au vendredi 8h–13h et 14h–20h, samedi 8h–13h, dimanche fermé.">
     <meta name="twitter:image" content="https://angelique-osteo.fr/photos-header/baby.webp">
     <meta name="twitter:image:alt" content="Ostéopathie pédiatrique — Cabinet Angélique Héduin Bessan">
 
@@ -81,32 +81,41 @@
         { "@type": "LocationFeatureSpecification", "name": "Accès PMR", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true }
       ],
+      "openingHours": [
+        "Mo-Fr 08:00-13:00",
+        "Mo-Fr 14:00-20:00",
+        "Sa 08:00-13:00"
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
           "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "14:00",
           "closes": "20:00"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Saturday",
-          "opens": "09:00",
+          "opens": "08:00",
           "closes": "13:00"
         }
       ],
-      "priceRange": "€€",
+      "priceRange": "60-120€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Espèces, Chèque",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Consultations d'ostéopathie — Tarifs",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Séance d'ostéopathie adulte", "description": "Traitement des douleurs articulaires, musculaires, vertébrales." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie pédiatrique (nourrisson/enfant)", "description": "Coliques, tête plate, torticolis, troubles du sommeil, RGO." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation femme enceinte / post-partum", "description": "Douleurs ligamentaires, préparation à l'accouchement, suivi post-natal." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie sportif", "description": "Prévention, récupération, traumatismes sportifs." }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation à domicile (rayon 15 km)", "description": "Déplacement à domicile pour personnes à mobilité réduite. Majoration tarifaire applicable." }, "priceCurrency": "EUR" }
+          { "@type": "AggregateOffer", "lowPrice": "60", "highPrice": "80", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Séance d'ostéopathie ou drainage lymphatique", "description": "Adulte, nourrisson, enfant, femme enceinte, sportif et drainage lymphatique." } },
+          { "@type": "AggregateOffer", "lowPrice": "80", "highPrice": "100", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Séance avec majoration", "description": "Après 20h, samedi après-midi, dimanche et jour férié : 20 euros de plus sur la consultation initiale." } },
+          { "@type": "AggregateOffer", "lowPrice": "80", "highPrice": "120", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Déplacement à domicile", "description": "Dans la limite de 15 km : au minimum 20 euros de plus sur la consultation initiale, plus les indemnités kilométriques. Déplacements à Agde et à Béziers possibles, avec majoration au-delà de 15 km." } }
         ]
       },
       "areaServed": [
@@ -146,7 +155,7 @@
       "@type": "WebPage",
       "@id": "https://angelique-osteo.fr/tarifs-et-horaires",
       "name": "Tarifs & Horaires — Ostéopathe à Bessan | Angélique Héduin",
-      "description": "Tarifs et horaires du cabinet d'ostéopathie à Bessan. Séance à 60€. Ouvert lundi–vendredi 8h45–20h, samedi 9h–13h. Déplacements à domicile (15 km). Agde, Pézenas, Hérault.",
+      "description": "Tarifs et horaires du cabinet d'ostéopathie à Bessan. Séance 60–80 €, majoration 80–100 €, domicile 80–120 €. Lundi–vendredi 8h–13h et 14h–20h, samedi 8h–13h, dimanche fermé.",
       "isPartOf": { "@id": "https://angelique-osteo.fr/#website" },
       "about": { "@id": "https://angelique-osteo.fr/#business" },
       "breadcrumb": { "@id": "https://angelique-osteo.fr/tarifs-et-horaires#breadcrumb" },
@@ -165,7 +174,7 @@
         {
           "@type": "Question",
           "name": "Quel est le prix d'une consultation ostéopathique à Bessan ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Toutes les consultations sont à 60€ (adulte, nourrisson, femme enceinte, sportif). Une majoration s'applique pour les consultations à domicile, en dehors des horaires habituels ou les jours fériés." }
+          "acceptedAnswer": { "@type": "Answer", "text": "La séance d'ostéopathie ou de drainage lymphatique est de 60 à 80 €. Une séance avec majoration (après 20h, le samedi après-midi, le dimanche ou un jour férié) est de 80 à 100 €, soit 20 € de plus sur la consultation initiale. À domicile : de 80 à 120 €, avec au minimum 20 € de plus, plus les indemnités kilométriques. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15 km." }
         },
         {
           "@type": "Question",
@@ -175,7 +184,7 @@
         {
           "@type": "Question",
           "name": "Quels sont les horaires du cabinet d'ostéopathie à Bessan ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le cabinet est ouvert du lundi au vendredi de 8h45 à 20h00, et le samedi de 9h00 à 13h00. Des consultations en dehors de ces horaires sont possibles sur demande, avec majoration." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Le cabinet est ouvert du lundi au vendredi de 8h à 13h et de 14h à 20h, et le samedi de 8h à 13h. Le dimanche, le cabinet est fermé. Après 20h, le samedi après-midi, le dimanche et les jours fériés, une séance peut être acceptée avec majoration : de 80 à 100 €." }
         },
         {
           "@type": "Question",
@@ -232,7 +241,7 @@
                 <h1 id="page-titre">Mes <em>Tarifs</em> et Horaires — Cabinet d'Ostéopathie à <em>Bessan</em></h1>
                 <p>
                     Vous recherchez un <strong>ostéopathe à Bessan</strong>, à <strong>Agde</strong>, à <strong>Pézenas</strong> ou dans les environs de l'Hérault ?<br>
-                    Je vous accueille dans mon cabinet du lundi au vendredi et le samedi matin, pour des soins adaptés à tous les âges. Je me déplace également à domicile dans un rayon de 15 km autour de Bessan. N'hésitez pas à me contacter prendre rendez-vous si vous souhaitez consulter un ostéo.
+                    Je vous accueille dans mon cabinet du lundi au vendredi, de 8h à 13h et de 14h à 20h, et le samedi de 8h à 13h. Le dimanche, le cabinet est fermé. Je me déplace également à domicile dans un rayon de 15 km autour de Bessan. Les déplacements à Agde et à Béziers sont possibles, avec une majoration au-delà de 15 km. N'hésitez pas à me contacter prendre rendez-vous si vous souhaitez consulter un ostéo.
                 </p>
             </section>
 
@@ -245,23 +254,22 @@
                     </div>
                     <dl class="price-list">
                         <div class="price-item">
-                            <dt>Séance d'Ostéopathie (Adulte)</dt>
-                            <dd class="price-val">60€</dd>
+                            <dt>Séance d'ostéopathie ou drainage lymphatique</dt>
+                            <dd class="price-val">60–80&nbsp;€</dd>
                         </div>
                         <div class="price-item">
-                            <dt>Consultation Pédiatrique / Post-partum</dt>
-                            <dd class="price-val">60€</dd>
+                            <dt>Séance avec majoration</dt>
+                            <dd class="price-val">80–100&nbsp;€</dd>
                         </div>
                         <div class="price-item">
-                            <dt>Drainage lymphatique</dt>
-                            <dd class="price-val">80€</dd>
+                            <dt>À domicile</dt>
+                            <dd class="price-val">80–120&nbsp;€</dd>
                         </div>
                     </dl>
-                    <p><strong>Consultations majorées + 20€ :</strong><br><br>
-                    — À domicile (rayon 15 km)<br>
-                    — Avant 08h45 / après 20h00<br>
-                    — Samedi après-midi / Dimanche<br>
-                    — Jours fériés exceptionnellement</p>
+                    <p><strong>Majoration&nbsp;: +20&nbsp;€ minimum sur la consultation initiale.</strong><br><br>
+                    — Après 20h, samedi après-midi, dimanche et jours fériés (80 à 100&nbsp;€)<br>
+                    — À domicile, dans la limite de 15&nbsp;km&nbsp;: au minimum 20&nbsp;€ de plus, plus les indemnités kilométriques (80 à 120&nbsp;€)<br>
+                    — Déplacements à Agde et à Béziers possibles, avec majoration au-delà de 15&nbsp;km</p>
                     <br>
                     <p class="price-footer">Vous pouvez régler par chèque ou espèces. Je vous remets une facture en fin de séance pour votre mutuelle. La majorité des mutuelles remboursent généralement les séances d'ostéopathie.</p>
                     <p class="price-alert">Attention : cartes bancaires non acceptées</p>
@@ -272,23 +280,23 @@
                     <dl class="schedule-grid">
                         <div class="day-row">
                             <dt>Lundi</dt>
-                            <dd><time datetime="08:00">08:00</time> – <time datetime="20:00">20:00</time></dd>
+                            <dd><time datetime="08:00">08:00</time> – <time datetime="13:00">13:00</time><br><time datetime="14:00">14:00</time> – <time datetime="20:00">20:00</time></dd>
                         </div>
                         <div class="day-row">
                             <dt>Mardi</dt>
-                            <dd><time datetime="08:00">08:00</time> – <time datetime="20:00">20:00</time></dd>
+                            <dd><time datetime="08:00">08:00</time> – <time datetime="13:00">13:00</time><br><time datetime="14:00">14:00</time> – <time datetime="20:00">20:00</time></dd>
                         </div>
                         <div class="day-row">
                             <dt>Mercredi</dt>
-                            <dd><time datetime="08:00">08:00</time> – <time datetime="20:00">20:00</time></dd>
+                            <dd><time datetime="08:00">08:00</time> – <time datetime="13:00">13:00</time><br><time datetime="14:00">14:00</time> – <time datetime="20:00">20:00</time></dd>
                         </div>
                         <div class="day-row">
                             <dt>Jeudi</dt>
-                            <dd><time datetime="08:00">08:00</time> – <time datetime="20:00">20:00</time></dd>
+                            <dd><time datetime="08:00">08:00</time> – <time datetime="13:00">13:00</time><br><time datetime="14:00">14:00</time> – <time datetime="20:00">20:00</time></dd>
                         </div>
                         <div class="day-row">
                             <dt>Vendredi</dt>
-                            <dd><time datetime="08:00">08:00</time> – <time datetime="20:00">20:00</time></dd>
+                            <dd><time datetime="08:00">08:00</time> – <time datetime="13:00">13:00</time><br><time datetime="14:00">14:00</time> – <time datetime="20:00">20:00</time></dd>
                         </div>
                         <div class="day-row">
                             <dt>Samedi</dt>
@@ -304,7 +312,7 @@
                 <div class="bento-item glass-card location-card animate-on-scroll">
                     <h2>Mon Secteur d'intervention</h2>
                     <p class="main-city">Mon cabinet : <strong>Bessan (34550)</strong></p>
-                    <p>Je me déplace également à domicile sur les communes voisines :</p>
+                    <p>Je me déplace également à domicile sur les communes voisines. Au-delà de 15&nbsp;km, une majoration s'applique, y compris à Agde et à Béziers&nbsp;:</p>
                     <ul class="villes-tags" aria-label="Communes desservies">
                         <li>Agde</li>
                         <li>Béziers</li>
@@ -385,6 +393,8 @@
                 <p><strong>Angélique Héduin</strong> — Ostéopathe D.O.</p>
                 <p>17 Chemin du Maïroual, 34550 Bessan</p>
                 <p>Tél : <a href="tel:+33622400172">06 22 40 01 72</a></p>
+                <p>Lundi–vendredi 8h–13h et 14h–20h · samedi 8h–13h · dimanche fermé</p>
+                <p>Séance 60–80 € · majoration 80–100 € · domicile 80–120 €</p>
             </div>
             <div class="footer-legal">
                 <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="/mentions-legales">Mentions légales</a> | <a href="#cookie-banner" id="manage-cookies">Gérer les cookies</a></p>
