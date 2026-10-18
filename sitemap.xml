@@ -120,12 +120,4 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- MENTIONS LÉGALES — obligatoire RGPD, faible priorité -->
-  <url>
-    <loc>https://angelique-osteo.fr/mentions-legales</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
