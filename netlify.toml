@@ -246,6 +246,19 @@
   status = 301
   force = true
 
+
+[[redirects]]
+  from = "/osteopathe-pres-florensac.html"
+  to = "/osteopathe-pres-florensac"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-pres-vias.html"
+  to = "/osteopathe-pres-vias"
+  status = 301
+  force = true
+
 # URL inconnue : 404.html avec un vrai statut 404.
 # Sans force, les fichiers, les pretty URLs et les règles ci-dessus restent prioritaires.
 [[redirects]]
