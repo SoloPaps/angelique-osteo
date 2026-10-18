@@ -91,6 +91,12 @@
     box-shadow:0 3px 12px rgba(191, 122, 208, 0.4)
 }
 
+/* Le badge reCAPTCHA se place en bas à droite, sous le bouton ?.
+   La mention légale du pied de page le remplace, comme sur l'accueil. */
+.grecaptcha-badge {
+    visibility:hidden!important;
+}
+
 /* ---------- Sombre ---------- */
 
 html.theme-dark {
