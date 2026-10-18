@@ -126,13 +126,13 @@
 
 [[redirects]]
   from = "https://www.angelique-heduin-osteopathe.fr/osteopathe-beziers"
-  to = "https://angelique-osteo.fr/"
+  to = "https://angelique-osteo.fr/osteopathe-pres-beziers"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.angelique-heduin-osteopathe.fr/osteopathe-agde"
-  to = "https://angelique-osteo.fr/"
+  to = "https://angelique-osteo.fr/osteopathe-pres-agde"
   status = 301
   force = true
 
@@ -189,6 +189,54 @@
 [[redirects]]
   from = "/mentions-legales.html"
   to = "/mentions-legales"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-agde"
+  to = "/osteopathe-pres-agde"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-beziers"
+  to = "/osteopathe-pres-beziers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-bebe-nourrisson-bessan.html"
+  to = "/osteopathe-bebe-nourrisson-bessan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathie-femme-enceinte-post-partum.html"
+  to = "/osteopathie-femme-enceinte-post-partum"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-du-sportif.html"
+  to = "/osteopathe-du-sportif"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-seance.html"
+  to = "/premiere-seance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-pres-agde.html"
+  to = "/osteopathe-pres-agde"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osteopathe-pres-beziers.html"
+  to = "/osteopathe-pres-beziers"
   status = 301
   force = true
 
