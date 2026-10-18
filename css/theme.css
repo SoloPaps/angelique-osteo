@@ -81,7 +81,7 @@
 .help-toggle {
     width:46px;
     height:46px;
-    background-color:#bf7ad0;
+    background-color:#aa4ec0;
     border-radius:50%;
     border:none;
     color:white;
@@ -553,7 +553,7 @@ html.theme-dark .floating-action-btn:hover {
 }
 
 html.theme-dark .help-toggle {
-    background-color:#bf7ad0;
+    background-color:#aa4ec0;
     color:#fff
 }
 
@@ -595,4 +595,19 @@ html.theme-dark .sidebar nav a:hover {
 html.theme-dark .circle-1,
 html.theme-dark .circle-2 {
     opacity:0.05
+}
+
+html.theme-dark .price-alert {
+    color:#f99090
+}
+
+html.theme-dark .source-badge.google,
+html.theme-dark .source-badge.facebook {
+    background:#2a3330;
+    color:#9ec1ff
+}
+
+html.theme-dark .source-badge.direct {
+    color:#d5e6d8;
+    background:rgba(125, 157, 133, 0.28)
 }

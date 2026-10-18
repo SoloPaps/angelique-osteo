@@ -42,18 +42,53 @@ function loadThirdPartyContent() {
 // ============================================================
 // GESTION DES COOKIES
 // ============================================================
-function acceptCookies() {
-  lsSet('cookie_consent', 'accepted');
+var cookieReturnFocus = null;
+
+function cookieFocusables(banner) {
+  return Array.prototype.slice.call(
+    banner.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+  );
+}
+
+function setPageInert(on) {
+  var banner = document.getElementById('cookie-banner');
+  Array.prototype.forEach.call(document.body.children, function(el) {
+    if (el === banner) return;
+    if (on) el.setAttribute('inert', '');
+    else el.removeAttribute('inert');
+  });
+}
+
+function hideCookieBanner() {
   var banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
+  setPageInert(false);
+  var back = cookieReturnFocus;
+  cookieReturnFocus = null;
+  if (back && typeof back.focus === 'function' && document.contains(back)) back.focus();
+}
+
+function showCookieBanner(returnEl) {
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  cookieReturnFocus = returnEl || null;
+  banner.style.display = 'flex';
+  setPageInert(true);
+  var accept = document.getElementById('btn-accept-cookies');
+  var target = accept || cookieFocusables(banner)[0];
+  if (target) target.focus({ preventScroll: true });
+}
+
+function acceptCookies() {
+  lsSet('cookie_consent', 'accepted');
+  hideCookieBanner();
   loadThirdPartyContent();
   loadConsentScripts();
 }
 
 function refuseCookies() {
   lsSet('cookie_consent', 'refused');
-  var banner = document.getElementById('cookie-banner');
-  if (banner) banner.style.display = 'none';
+  hideCookieBanner();
 }
 
 function initCookies() {
@@ -65,8 +100,12 @@ function initCookies() {
     loadConsentScripts();
   } else if (consent === 'refused') {
     if (banner) banner.style.display = 'none';
+  } else if (banner) {
+    showCookieBanner(null);
   }
 }
+
+window.openCookieDialog = showCookieBanner;
 
 // ============================================================
 // ANNÉE COPYRIGHT
@@ -207,10 +246,6 @@ window.addEventListener('load', function() {
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Fonts Google sans handler inline (fix CSP)
-  var fontPreload = document.getElementById('google-fonts-preload');
-  if (fontPreload) { fontPreload.rel = 'stylesheet'; }
-
   // Init cookies
   initCookies();
 
@@ -219,6 +254,35 @@ document.addEventListener('DOMContentLoaded', function() {
   var btnRefuse = document.getElementById('btn-refuse-cookies');
   if (btnAccept) btnAccept.addEventListener('click', function(e) { e.preventDefault(); acceptCookies(); });
   if (btnRefuse) btnRefuse.addEventListener('click', function(e) { e.preventDefault(); refuseCookies(); });
+
+  var manageCookies = document.getElementById('manage-cookies');
+  if (manageCookies) {
+    manageCookies.addEventListener('click', function(e) {
+      e.preventDefault();
+      showCookieBanner(manageCookies);
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    var banner = document.getElementById('cookie-banner');
+    if (!banner || banner.style.display === 'none' || e.key !== 'Tab') return;
+    var items = cookieFocusables(banner);
+    if (!items.length) return;
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (!banner.contains(document.activeElement)) {
+      e.preventDefault();
+      (e.shiftKey ? last : first).focus();
+      return;
+    }
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 
   // Menu hamburger
   var hamburger = document.querySelector('.hamburger');

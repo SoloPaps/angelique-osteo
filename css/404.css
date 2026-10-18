@@ -47,7 +47,7 @@ body {
 .logo-link:hover,
 .logo-link:focus-visible {
     opacity:0.75;
-    outline:2px solid #7d9d85;
+    outline:2px solid #53775c;
     outline-offset:4px;
     border-radius:4px
 }
@@ -63,7 +63,7 @@ body {
     font-size:clamp(5rem, 18vw, 9rem);
     font-weight:600;
     line-height:1;
-    color:#7d9d85;
+    color:#53775c;
     letter-spacing:-0.02em;
     user-select:none
 }
@@ -71,7 +71,7 @@ body {
 .separator {
     width:48px;
     height:2px;
-    background-color:#7d9d85;
+    background-color:#53775c;
     border-radius:2px;
     opacity:0.5
 }
@@ -116,9 +116,9 @@ body {
 }
 
 .btn-home {
-    background-color:#7d9d85;
+    background-color:#53775c;
     color:#fff;
-    border:2px solid #7d9d85
+    border:2px solid #53775c
 }
 
 .btn-home:hover,
@@ -132,13 +132,13 @@ body {
 
 .btn-rdv-404 {
     background-color:transparent;
-    color:#7d9d85;
-    border:2px solid #7d9d85
+    color:#53775c;
+    border:2px solid #53775c
 }
 
 .btn-rdv-404:hover,
 .btn-rdv-404:focus-visible {
-    background-color:#7d9d85;
+    background-color:#53775c;
     color:#fff;
     transform:translateY(-1px);
     box-shadow:0 4px 12px rgba(125, 157, 133, 0.35);
@@ -160,7 +160,7 @@ body {
 }
 
 .footer-404 a {
-    color:#7d9d85;
+    color:#53775c;
     text-decoration:none;
     font-weight:400;
     transition:color 0.2s ease
@@ -201,7 +201,7 @@ body {
 }
 
 :focus-visible {
-    outline:2px solid #7d9d85;
+    outline:2px solid #53775c;
     outline-offset:3px;
     border-radius:3px
 }

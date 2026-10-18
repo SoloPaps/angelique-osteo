@@ -5,8 +5,8 @@
 
 
 :root {
-    --primary-color:#7d9d85;
-    --accent-purple:#bf7ad0;
+    --primary-color:#53775c;
+    --accent-purple:#aa4ec0;
     --text-dark:#3d3530;
     --bg-soft:#f8f6f3;
     --glass:rgba(255, 255, 255, 0.7)
@@ -137,7 +137,7 @@ body {
     font-weight:600;
     color:#fff!important;
     text-decoration:none;
-    background:linear-gradient(135deg, #bf7ad0, #a86bb8);
+    background:linear-gradient(135deg, #aa4ec0, #9650a8);
     border-radius:50px;
     white-space:nowrap;
     flex-shrink:0
@@ -355,7 +355,7 @@ body {
     margin-bottom:8px
 }
 
-.press-mini-card h4 {
+.press-mini-card h3 {
     font-size:1rem;
     margin-bottom:8px;
     color:var(--text-dark)
@@ -488,7 +488,7 @@ body {
 .help-toggle {
     width:46px;
     height:46px;
-    background-color:#bf7ad0;
+    background-color:#aa4ec0;
     border-radius:50%;
     border:none;
     color:white;
@@ -572,7 +572,7 @@ body {
 }
 
 .footer-legal a {
-    color:#5e7664;
+    color:#53775c;
     text-decoration:none;
     font-weight:500
 }
@@ -787,7 +787,7 @@ body {
         color:var(--accent-purple)
 }
 
-    .press-mini-card h4 {
+    .press-mini-card h3 {
         font-size:1.1rem
 }
 
@@ -981,7 +981,7 @@ body {
 }
 
 .color-mode-check {
-    color:#7d9d85;
+    color:#53775c;
     font-size:12px;
     margin-left:4px
 }

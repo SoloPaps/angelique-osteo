@@ -3,7 +3,7 @@
    Même chrome que les pages intérieures (nav, pied de page, menu ?). */
 
 :root {
-    --primary:#7d9d85;
+    --primary:#53775c;
     --primary-deep:#3f6b4c;
     --ink:#3d3530;
     --muted:#5c534c;
@@ -126,7 +126,7 @@ a:hover { text-decoration:none; }
     font-weight:600;
     color:#fff !important;
     text-decoration:none;
-    background:linear-gradient(135deg,#bf7ad0,#a86bb8);
+    background:linear-gradient(135deg,#aa4ec0,#9650a8);
     border-radius:50px;
     white-space:nowrap;
     flex-shrink:0;
@@ -149,7 +149,7 @@ a:hover { text-decoration:none; }
 
 .breadcrumb a { color:var(--muted); text-decoration:none; }
 .breadcrumb a:hover { text-decoration:underline; }
-.breadcrumb li:not(:last-child)::after { content:"/"; margin-left:6px; color:#b7aea6; }
+.breadcrumb li:not(:last-child)::after { content:"/"; margin-left:6px; color:#6e6e6e; }
 .breadcrumb [aria-current="page"] { color:var(--ink); font-weight:500; }
 
 .badge {
@@ -256,7 +256,7 @@ a:hover { text-decoration:none; }
 
 .btn-docto {
     display:inline-block;
-    background:linear-gradient(135deg,#bf7ad0,#a86bb8);
+    background:linear-gradient(135deg,#aa4ec0,#9650a8);
     color:#fff !important;
     text-decoration:none;
     font-weight:600;
@@ -265,7 +265,7 @@ a:hover { text-decoration:none; }
     font-size:.92rem;
 }
 
-.btn-docto:hover { filter:brightness(1.05); }
+.btn-docto:hover { background:linear-gradient(135deg,#9650a8,#8a489c); }
 
 .see-also ul {
     list-style:none;
@@ -331,7 +331,7 @@ a:hover { text-decoration:none; }
 .help-toggle {
     width:46px;
     height:46px;
-    background:#bf7ad0;
+    background:#aa4ec0;
     border-radius:50%;
     border:none;
     color:#fff;
@@ -445,7 +445,7 @@ a:hover { text-decoration:none; }
         font-size:13px;
     }
 
-    .navbar-links a:hover { background:none; color:var(--primary); }
+    .navbar-links a:hover { background:none; color:var(--primary-deep); }
 
     .page-hero { padding:116px 8% 40px; }
     .page-body { padding:36px 8% 72px; }
@@ -485,3 +485,4 @@ html.theme-dark {
 }
 
 html.theme-dark .page-blur-overlay { background:rgba(23,30,27,.72); }
+html.theme-dark .breadcrumb li:not(:last-child)::after { color:#c5c3bc; }
