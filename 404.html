@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/theme-init.js?v=2"></script>
+  <script>(function(){var k="ao-theme",c="auto";try{var v=localStorage.getItem(k);if(v==="light"||v==="dark"||v==="auto")c=v;}catch(e){}var d=c==="dark"||(c!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);var h=document.documentElement;h.setAttribute("data-theme",c);h.classList.toggle("theme-dark",d);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#171e1b":"#7d9d85");})();</script>
+  <script src="js/theme-init.js?v=3" defer></script>
   <meta name="robots" content="noindex, nofollow">
   <title>Page introuvable — Angélique Héduin Ostéopathe Bessan</title>
 
@@ -18,8 +19,112 @@
   <meta name="theme-color" content="#7d9d85">
   <link rel="manifest" href="/site.webmanifest?v=4">
 
-  <link rel="stylesheet" href="/css/fonts.css?v=1">
-  <link rel="stylesheet" href="/css/cookie.css?v=4">
+  <style data-inline="fonts-critical">@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/f20.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/f17.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/f17.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}</style>
+  <link rel="stylesheet" href="/css/fonts.css?v=1" media="print" data-async-css>
+  <noscript><link rel="stylesheet" href="/css/fonts.css?v=1"></noscript>
+  <style data-inline="css/cookie.css">
+/* =============================================================
+   cookie.css — Bandeau de consentement cookies
+   angelique-osteo.fr
+   ============================================================= */
+
+
+#cookie-banner {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#1a1a2e;
+    color:#f0f0f0;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    z-index:9999;
+    font-family:'Poppins', sans-serif;
+    font-size:0.85rem;
+    box-shadow:0 -4px 20px rgba(0, 0, 0, 0.3)
+}
+
+#cookie-banner p {
+    margin:0;
+    flex:1;
+    min-width:220px;
+    line-height:1.6
+}
+
+#cookie-banner a {
+    color:#a8c5da;
+    text-decoration:underline
+}
+
+.cookie-buttons {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap
+}
+
+.btn-accept-cookies {
+    background:#607c63;
+    color:#fff;
+    border:none;
+    padding:10px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:0.85rem
+}
+
+.btn-refuse-cookies {
+    background:transparent;
+    color:#ccc;
+    border:1px solid #555;
+    padding:10px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:0.85rem
+}
+
+.btn-accept-cookies:hover {
+    background:#4e6a51
+}
+
+.btn-refuse-cookies:hover {
+    border-color:#999;
+    color:#fff
+}
+
+.btn-accept-cookies:focus-visible,
+.btn-refuse-cookies:focus-visible,
+#cookie-banner a:focus-visible {
+    outline:3px solid #fff;
+    outline-offset:2px
+}
+
+.skip-link {
+    position:absolute;
+    left:12px;
+    top:8px;
+    z-index:10001;
+    padding:10px 14px;
+    background:#3d3530;
+    color:#fff;
+    font-family:'Plus Jakarta Sans', 'Poppins', sans-serif;
+    font-size:0.9rem;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:6px;
+    transform:translateY(-200%)
+}
+
+.skip-link:focus {
+    transform:translateY(0);
+    outline:3px solid #fff;
+    outline-offset:2px
+}
+  </style>
   <link rel="stylesheet" href="css/404.css?v=4">
   <script>try{var _cs=localStorage.getItem('cookie_consent');if(_cs==='accepted'||_cs==='refused'){var _cb=document.getElementById('cookie-banner');if(_cb)_cb.style.display='none';}}catch(e){}</script>
   <link rel="stylesheet" href="css/theme.css?v=4">
