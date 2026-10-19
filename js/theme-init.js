@@ -1,3 +1,18 @@
+/* Active les CSS chargées en media=print une fois le fichier reçu,
+   pour qu'elles ne bloquent pas le premier rendu. */
+(function () {
+  var links = document.querySelectorAll("link[data-async-css]");
+  for (var i = 0; i < links.length; i++) {
+    (function (link) {
+      function enable() {
+        if (link.media !== "all") link.media = "all";
+      }
+      link.addEventListener("load", enable);
+      if (link.sheet) enable();
+    })(links[i]);
+  }
+})();
+
 /* Applique le thème avant le premier rendu.
    Choix mémorisé : auto | light | dark. Défaut : auto (prefers-color-scheme). */
 (function () {
