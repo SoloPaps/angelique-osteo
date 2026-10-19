@@ -21,7 +21,7 @@ html {
 body {
     background-color:#fcfbfa;
     color:#333;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins', 'Poppins Fallback', sans-serif;
     overflow-x:hidden;
     text-rendering:optimizeLegibility;
     -webkit-font-smoothing:antialiased
@@ -213,7 +213,7 @@ body {
 }
 
 .description h1 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.9rem;
     margin-bottom:14px;
     color:#3d3530;
@@ -306,7 +306,7 @@ body {
 }
 
 .spec-header h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.7rem;
     color:#3d3530;
     margin-bottom:8px
@@ -356,7 +356,7 @@ body {
 }
 
 .cabinet-content h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.7rem;
     color:#3d3530;
     margin-bottom:22px
@@ -416,7 +416,7 @@ body {
 }
 
 .avis-section>h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.9rem;
     margin-bottom:36px;
     color:#3d3530;

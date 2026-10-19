@@ -413,6 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Filtres catégories
   var tabs   = document.querySelectorAll('.filter-tab');
   var groups = document.querySelectorAll('.category-group');
+  var panel  = document.getElementById('formations-panel');
   if (tabs.length && groups.length) {
     tabs.forEach(function(tab) {
       tab.addEventListener('click', function() {
@@ -420,6 +421,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
+        if (panel && tab.id) panel.setAttribute('aria-labelledby', tab.id + ' formations-titre');
         groups.forEach(function(group) {
           group.classList.toggle('hidden', filter !== 'all' && group.getAttribute('data-category') !== filter);
         });

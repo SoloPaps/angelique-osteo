@@ -38,7 +38,7 @@ html {
 body {
     background-color:var(--bg-page);
     color:var(--text-dark);
-    font-family:'Plus Jakarta Sans', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', sans-serif;
     line-height:1.6;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased
@@ -193,7 +193,7 @@ body {
 }
 
 .hero h1 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:clamp(2rem, 5vw, 3.2rem);
     color:var(--text-dark);
     line-height:1.2;
@@ -226,7 +226,7 @@ body {
 
 .stat-num {
     display:block;
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:2rem;
     font-weight:600;
     color:var(--text-dark);
@@ -327,7 +327,7 @@ body {
 }
 
 .form-card h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.5rem;
     margin-bottom:6px;
     color:var(--text-dark)
@@ -420,7 +420,7 @@ body {
     padding:11px 14px;
     border:1.5px solid #e2dcd6;
     border-radius:12px;
-    font-family:'Plus Jakarta Sans', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', sans-serif;
     font-size:0.9rem;
     color:var(--text-dark);
     background:rgba(255, 255, 255, 0.8);
@@ -537,7 +537,7 @@ body {
     color:white;
     border:none;
     border-radius:14px;
-    font-family:'Plus Jakarta Sans', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', sans-serif;
     font-size:0.95rem;
     font-weight:600;
     cursor:pointer;
@@ -597,7 +597,7 @@ body {
 }
 
 .reviews-section h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.6rem;
     color:var(--text-dark);
     margin-bottom:6px
@@ -621,7 +621,7 @@ body {
     border-radius:var(--radius-pill);
     border:1.5px solid #e2dcd6;
     background:#fff;
-    font-family:'Plus Jakarta Sans', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', sans-serif;
     font-size:0.8rem;
     font-weight:500;
     cursor:pointer;
@@ -782,7 +782,7 @@ body {
     border:1.5px solid #e2dcd6;
     border-radius:var(--radius-pill);
     padding:6px 14px;
-    font-family:'Plus Jakarta Sans', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', sans-serif;
     font-size:0.8rem;
     font-weight:600;
     cursor:pointer;
@@ -956,7 +956,7 @@ body {
 
 .footer-legal a {
     color:#53775c;
-    text-decoration:none;
+    text-decoration:underline;
     font-weight:500
 }
 
@@ -1039,7 +1039,7 @@ body {
 }
 
 .admin-header h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.4rem
 }
 

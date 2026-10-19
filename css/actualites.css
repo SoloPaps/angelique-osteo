@@ -25,7 +25,7 @@ html {
 body {
     background-color:#f6f3f0;
     color:var(--text-dark);
-    font-family:'Plus Jakarta Sans', 'Poppins', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', 'Poppins', 'Poppins Fallback', sans-serif;
     line-height:1.6;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased
@@ -161,7 +161,7 @@ body {
 }
 
 .section-title {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:2rem;
     color:var(--primary-color);
     margin-bottom:10px
@@ -175,7 +175,7 @@ body {
 }
 
 .subsection-title {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.6rem;
     color:var(--text-dark);
     margin-bottom:28px;
@@ -243,7 +243,7 @@ body {
 }
 
 .article-title {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.2rem;
     margin-bottom:10px;
     color:var(--text-dark);
@@ -317,7 +317,7 @@ body {
 }
 
 .press-quote {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.2rem;
     font-style:italic;
     color:var(--text-dark);
@@ -573,7 +573,7 @@ body {
 
 .footer-legal a {
     color:#53775c;
-    text-decoration:none;
+    text-decoration:underline;
     font-weight:500
 }
 

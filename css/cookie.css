@@ -18,7 +18,7 @@
     flex-wrap:wrap;
     gap:14px;
     z-index:9999;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins', 'Poppins Fallback', sans-serif;
     font-size:0.85rem;
     box-shadow:0 -4px 20px rgba(0, 0, 0, 0.3)
 }
@@ -86,7 +86,7 @@
     padding:10px 14px;
     background:#3d3530;
     color:#fff;
-    font-family:'Plus Jakarta Sans', 'Poppins', sans-serif;
+    font-family:'Plus Jakarta Sans', 'Jakarta Fallback', 'Poppins', 'Poppins Fallback', sans-serif;
     font-size:0.9rem;
     font-weight:600;
     text-decoration:none;

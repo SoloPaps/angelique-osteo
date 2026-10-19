@@ -37,6 +37,8 @@
     var dark = isDark(choice);
     document.documentElement.setAttribute("data-theme", choice);
     document.documentElement.classList.toggle("theme-dark", dark);
+    var darkLink = document.getElementById("ao-dark-css");
+    if (darkLink && dark) darkLink.media = "all";
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", dark ? "#171e1b" : "#7d9d85");
     var nodes = document.querySelectorAll(".theme-choice");
