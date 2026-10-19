@@ -22,7 +22,7 @@ html {
 body {
     background-color:#fdfcfb;
     color:#3d3530;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins', 'Poppins Fallback', sans-serif;
     overflow-x:hidden;
     line-height:1.6;
     -webkit-font-smoothing:antialiased
@@ -160,7 +160,7 @@ body {
 }
 
 .parcours-hero h1 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:2.4rem;
     color:#3d3530;
     margin-bottom:8px;
@@ -217,7 +217,7 @@ body {
 }
 
 .timeline-section h2 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.8rem;
     color:#3d3530;
     text-align:center;
@@ -269,7 +269,7 @@ body {
 }
 
 .timeline-date {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.4rem;
     color:#53775c;
     font-weight:700;
@@ -285,7 +285,7 @@ body {
 }
 
 .timeline-content h3 {
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display', 'Playfair Fallback', serif;
     font-size:1.15rem;
     margin-bottom:8px;
     color:#3d3530
@@ -446,13 +446,20 @@ body {
 
 .footer-legal a {
     color:#53775c;
-    text-decoration:none
+    text-decoration:underline
 }
 
 .animate-on-scroll {
     opacity:0;
     transform:translateY(20px);
     transition:opacity 0.6s ease-out, transform 0.6s ease-out
+}
+
+/* Le hero est le plus grand élément peint : le laisser visible dès le CSS
+   évite d'attendre le script pour le LCP. L'état final est identique. */
+.parcours-hero.animate-on-scroll {
+    opacity:1;
+    transform:none
 }
 
 .animate-on-scroll.visible {
